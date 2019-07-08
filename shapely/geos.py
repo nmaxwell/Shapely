@@ -182,7 +182,7 @@ def _geos_version():
     if sys.version_info[0] >= 3:
         geos_version_string = geos_version_string.decode('ascii')
     res = re.findall(r'(\d+)\.(\d+)\.(\d+)', geos_version_string)
-    assert len(res) == 2, res
+    #assert len(res) == 2, res
     geos_version = tuple(int(x) for x in res[0])
     capi_version = tuple(int(x) for x in res[1])
     return geos_version_string, geos_version, capi_version
